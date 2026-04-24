@@ -12,6 +12,10 @@
 - HTML5
 - CSS3
 
+## 🔗 Онлайн-версия сайта
+
+👉 [Открыть сайт](https://sashmay12.github.io/Practice-1/)
+
 ## Структура проекта
 
 ```text
@@ -19,6 +23,3 @@ Practice-1/
 ├── index.html
 └── images/
 
-## Онлайн-версия сайта
-
-👉 [Открыть сайт](https://sashmay12.github.io/Practice-1/)
