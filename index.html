@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASUS ROG Zephyrus G14 GA401QM-K2100T</title>
+    <style>
+        :root {
+            --rog-red: #e60012;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0a0a;
+            color: #ddd;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.95)), url('images/laptop-main.jpg') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6);
+        }
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px var(--rog-red);
+        }
+        .subtitle {
+            font-size: 1.8rem;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--rog-red);
+            color: white;
+            padding: 14px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #ff1a2e;
+            transform: scale(1.05);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10,10,10,0.95);
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--rog-red);
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            color: #ddd;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--rog-red);
+        }
+
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: white;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: var(--rog-red);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .spec-card {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #333;
+            transition: transform 0.3s;
+        }
+        .spec-card:hover {
+            transform: translateY(-10px);
+        }
+        .spec-card h3 {
+            color: var(--rog-red);
+            margin-bottom: 15px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        .feature-item {
+            text-align: center;
+        }
+        .feature-item img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 12px;
+            transition: transform 0.4s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .review {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background: #000;
+            padding: 60px 20px 30px;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            .nav-links { gap: 15px; font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">ROG ZEPHYRUS G14</div>
+            <div class="nav-links">
+                <a href="#home">Главная</a>
+                <a href="#specs">Характеристики</a>
+                <a href="#features">Особенности</a>
+                <a href="#gallery">Галерея</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contacts">Контакты</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главная секция -->
+    <header id="home">
+        <div class="overlay"></div>
+        <div class="header-content">
+            <h1>ASUS ROG ZEPHYRUS G14</h1>
+            <p class="subtitle">GA401QM-K2100T • Серый • 2021</p>
+            <p style="font-size:1.3rem; margin-bottom:40px;">Мощь в компактном корпусе — игровой ноутбук, который можно брать с собой куда угодно</p>
+            <a href="#specs" class="btn">Смотреть характеристики</a>
+        </div>
+    </header>
+
+    <!-- Характеристики -->
+    <section id="specs">
+        <h2>Технические характеристики</h2>
+        <div class="specs-grid">
+            <div class="spec-card">
+                <h3>Процессор</h3>
+                <p><strong>AMD Ryzen™ 9 5900HS</strong><br>8 ядер / 16 потоков • до 4.6 ГГц</p>
+            </div>
+            <div class="spec-card">
+                <h3>Видеокарта</h3>
+                <p><strong>NVIDIA GeForce RTX™ 3060</strong><br>6 ГБ GDDR6 • ROG Boost до 80 Вт</p>
+            </div>
+            <div class="spec-card">
+                <h3>Экран</h3>
+                <p><strong>14" WQHD (2560×1440)</strong><br>120 Гц • 100% DCI-P3 • IPS</p>
+            </div>
+            <div class="spec-card">
+                <h3>Память и хранение</h3>
+                <p><strong>16 ГБ DDR4-3200</strong> (расширяется до 32 ГБ)<br><strong>1 ТБ PCIe NVMe SSD</strong></p>
+            </div>
+            <div class="spec-card">
+                <h3>Корпус и автономность</h3>
+                <p>Вес ≈ 1.65 кг<br>Батарея 76 Вт·ч<br>Алюминиевый корпус</p>
+            </div>
+            <div class="spec-card">
+                <h3>Дополнительно</h3>
+                <p>Wi-Fi 6 • RGB-клавиатура • AniMe Matrix (на некоторых версиях) • Thunderbolt 3 / USB-C</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Особенности -->
+    <section id="features" style="background:#111;">
+        <h2>Почему выбирают Zephyrus G14</h2>
+        <div class="features">
+            <div class="feature-item">
+                <h3>Компактность</h3>
+                <p>Самый мощный 14-дюймовый игровой ноутбук в мире на момент выхода</p>
+            </div>
+            <div class="feature-item">
+                <h3>Производительность</h3>
+                <p>Идеально подходит для игр, монтажа видео, 3D-моделирования и стриминга</p>
+            </div>
+            <div class="feature-item">
+                <h3>Экран мечты</h3>
+                <p>Высокая частота обновления + отличная цветопередача для игр и творчества</p>
+            </div>
+            <div class="feature-item">
+                <h3>Стильный дизайн</h3>
+                <p>Тонкий металлический корпус серого цвета с фирменной подсветкой ROG</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery">
+        <h2>Галерея</h2>
+        <div class="gallery">
+            <img src="images/laptop-main.jpg" alt="ASUS ROG Zephyrus G14">
+            <img src="images/laptop-open.jpg" alt="Ноутбук в открытом виде">
+            <img src="images/anime-matrix.jpg" alt="AniMe Matrix на крышке">
+            <img src="images/specs.jpg" alt="Вид сбоку и порты">
+            <img src="images/specs(2).jpg" alt="Вид сбоку и порты">
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" style="background:#111;">
+        <h2>Что говорят владельцы</h2>
+        <div class="review">
+            <p>«Это лучший игровой ноутбук, который я когда-либо покупал. Мощный, лёгкий и невероятно красивый. В играх держит стабильные 100+ FPS в WQHD.»</p>
+            <strong>— Алексей, геймер и видеомонтажёр</strong>
+        </div>
+        <div class="review">
+            <p>«Отличная автономность для игрового ноутбука — до 8 часов в офисных задачах. Ryzen 9 и RTX 3060 тянут всё, что я бросаю на него.»</p>
+            <strong>— Дмитрий, разработчик</strong>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts">
+        <h2>Хотите такой же?</h2>
+        <p style="text-align:center; font-size:1.3rem; max-width:700px; margin:0 auto 40px;">
+            Ноутбук можно приобрести в DNS, M.Video, на официальном сайте ASUS или в других магазинах компьютерной техники.
+        </p>
+        <div style="text-align:center;">
+            <a href="https://www.dns-shop.ru/product/96b2b5dc338b3332/14-noutbuk-asus-rog-zephyrus-g14-ga401qm-k2100t-seryj/" target="_blank" class="btn">Перейти на страницу в DNS</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Практическая работа 1 • ASUS ROG Zephyrus G14 GA401QM-K2100T</p>
+            <p>Сайт создан для учебных целей • Только HTML5 + CSS3</p>
+        </div>
+    </footer>
+
+    <script>
+        // Плавная прокрутка для ссылок в меню
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
